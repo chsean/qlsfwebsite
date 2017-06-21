@@ -13,9 +13,14 @@
 /* Since positioning the image, we need to help out the caption */
 .carousel-caption {
 
-  top: 50%;
-  transform: translateY(-50%);
-  bottom: initial;
+
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  height: 100%;
+
+  /*transform: translateY(-50%);
+  bottom: initial;*/
 }
 
 /* Declare heights because of positioning of img element */
@@ -33,7 +38,6 @@
   line-height: 1.4;
 }*/
 .carousel-caption > h1 {
-  text-align: center;
   font-weight: normal;
 }
 .carousel-indicators li {
@@ -212,12 +216,10 @@
   color: #246638;
 }
 .banner {
-  height: auto;
-  width: auto;
-  min-height: 100%;
+  min-height: 575px;
   min-width: 100%;
-  max-width: 100%;
-  filter: brightness(75%);
+  background-size: cover;
+  filter: brightness(72%);
 
 }
 
