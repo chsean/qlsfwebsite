@@ -90,13 +90,16 @@
 .navbar-default {
     background-color: #F8F8F8;
     border-color: #E7E7E7;
-
-    padding-top: 34px;
+    padding-top: 19px;
     padding-bottom: 40px;
 }
 /* Title */
 .navbar-default .navbar-brand {
     color: #777;
+}
+.navbar-default .navbar-brand>img {
+  height: 65px;
+  width: auto;
 }
 .navbar-default .navbar-brand:hover,
 .navbar-default .navbar-brand:focus {
@@ -107,6 +110,7 @@
 }
 /* Link */
 .navbar-default .navbar-nav > li {
+  margin-top: 14px;
   margin-left:20px;
 }
 .navbar-default .navbar-nav > li > a {
@@ -317,3 +321,10 @@
     left: 0;
     float:left;
 }
+/*
+.logo {
+  margin-top: -18px;
+  height: 10px;
+  /*height: 9.5vmin;*/
+
+}*/
