@@ -90,12 +90,12 @@
 .navbar-default {
     background-color: #F8F8F8;
     border-color: #E7E7E7;
-    padding-top: 19px;
-    padding-bottom: 40px;
+    padding-top: 18px;
 }
 /* Title */
 .navbar-default .navbar-brand {
     color: #777;
+    display:block;
 }
 .navbar-default .navbar-brand>img {
   height: 65px;
@@ -108,9 +108,16 @@
   border-bottom-color: #a9a9a9;
   border-bottom-color: rgba(255,255,255,.25);
 }
+/*padding for dropdown button */
+.navbar-default .navbar-header .navbar-toggle {
+  margin-top: 30px;
+
+  margin-bottom: 44px;
+}
 /* Link */
 .navbar-default .navbar-nav > li {
   margin-top: 14px;
+  margin-bottom: 40px;
   margin-left:20px;
 }
 .navbar-default .navbar-nav > li > a {
