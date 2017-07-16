@@ -237,6 +237,11 @@
   font-size: 130%;
   font-weight:normal;
 }
+.job-bullet {
+  font-size: 200%;
+  font-weight:normal;
+  text-align: center;
+}
 #qilu-button {
   padding: 0px;
   max-width: 100%;
