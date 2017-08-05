@@ -1,0 +1,342 @@
+
+
+/* CUSTOMIZE THE CAROUSEL
+-------------------------------------------------- */
+
+/* Carousel base class */
+.carousel {
+  height: 600px;
+  margin-top: 102px;
+  width:100%;
+}
+
+/* Since positioning the image, we need to help out the caption */
+.carousel-caption {
+
+
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  height: 100%;
+
+  /*transform: translateY(-50%);
+  bottom: initial;*/
+}
+
+/* Declare heights because of positioning of img element */
+.carousel .item {
+  height: 600px;
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  overflow:hidden
+}
+/* Bump up size of carousel content */
+/*.carousel-caption p {
+  margin-bottom: 20px;
+  font-size: 21px;
+  line-height: 1.4;
+}*/
+.carousel-caption > h1 {
+  font-weight: normal;
+}
+.carousel-indicators li {
+   visibility: hidden;
+ }
+
+/* Hovering for Thumbnails */
+.team-member {
+  background-color: #fff;
+  border-radius: 10px;
+  /*padding: 12px 34px; */
+  color: #000;
+  font-size: 16px;
+  display: block;
+  margin-bottom: 30px;
+  transition: .2s linear;
+
+  text-decoration: none;
+}
+
+.team-member:focus{
+  text-decoration: none;
+  outline: none;
+}
+.team-member:visited{
+  text-decoration: none;
+  outline: none;
+}
+.team-member:hover{
+  /*background-color: #a8ffb8; fades background color on hover */
+  color: #fff;
+  text-decoration:  none;
+
+}
+
+
+
+/*start nav
+--------------------------------------------------*/
+
+/*
+ * Globals
+ */
+
+
+/*end nav */
+
+/*start new navbar */
+/* navbar */
+.navbar-default {
+    background-color: #F8F8F8;
+    border-color: #E7E7E7;
+    padding-top: 18px;
+}
+/* Title */
+.navbar-default .navbar-brand {
+    color: #777;
+    display:block;
+}
+.navbar-default .navbar-brand>img {
+  height: 65px;
+  width: auto;
+}
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus {
+  color: #339933;
+  background-color: transparent;
+  border-bottom-color: #a9a9a9;
+  border-bottom-color: rgba(255,255,255,.25);
+}
+/*padding for dropdown button */
+.navbar-default .navbar-header .navbar-toggle {
+  margin-top: 30px;
+
+  margin-bottom: 44px;
+}
+/* Link */
+.navbar-default .navbar-nav > li {
+  margin-top: 14px;
+  margin-bottom: 40px;
+  margin-left:20px;
+}
+.navbar-default .navbar-nav > li > a {
+  padding-right: 0;
+  padding-left: 0;
+  font-size: 18px;
+  /*font-weight: bold;*/
+  color: #fff; /* IE8 proofing */
+  color: rgba(0,0,0,.75);
+  border-bottom: 2px solid transparent;
+}
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+  color: #339933;
+  background-color: transparent;
+  border-bottom-color: #a9a9a9;
+  border-bottom-color: rgba(255,255,255,.25);
+}
+
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus {
+  color: #339933;
+  border-bottom-color: #339933;
+
+  background: transparent !important;
+   box-shadow:none !important;
+}
+.navbar-default .navbar-nav > .open > a,
+.navbar-default .navbar-nav > .open > a:hover,
+.navbar-default .navbar-nav > .open > a:focus {
+    color: #555;
+    background-color: #D5D5D5;
+}
+/* Caret */
+.navbar-default .navbar-nav > .dropdown > a .caret {
+    border-top-color: #777;
+    border-bottom-color: #777;
+}
+.navbar-default .navbar-nav > .dropdown > a:hover .caret,
+.navbar-default .navbar-nav > .dropdown > a:focus .caret {
+    border-top-color: #333;
+    border-bottom-color: #333;
+}
+.navbar-default .navbar-nav > .open > a .caret,
+.navbar-default .navbar-nav > .open > a:hover .caret,
+.navbar-default .navbar-nav > .open > a:focus .caret {
+    border-top-color: #555;
+    border-bottom-color: #555;
+}
+/* Mobile version */
+.navbar-default .navbar-toggle {
+    border-color: #DDD;
+}
+.navbar-default .navbar-toggle:hover,
+.navbar-default .navbar-toggle:focus {
+    background-color: #DDD;
+}
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: #CCC;
+}
+@media (max-width: 767px) {
+    .navbar-default .navbar-nav .open .dropdown-menu > li > a {
+        color: #777;
+    }
+    .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover,
+    .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
+          color: #333;
+    }
+}
+
+#jumbo {
+
+  margin-top: 126px;
+  margin-bottom: 0;
+  height:525px;
+  padding: 0px;
+  overflow: hidden;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.jumbo-body {
+
+  overflow: hidden;
+  text-align: center;
+  vertical-align: middle;
+  background-color: #333333;
+  margin-bottom: 0;
+  padding-bottom: 6%;
+  color: white;
+}
+
+.jumbo-body .container > p {
+  padding-bottom: 1%;
+}
+.jumbo-body .container > h3 {
+  font-weight:normal;
+}
+
+.light {
+  background-color: #f7f9f7;
+  color: black;
+}
+.text-green {
+  color: #246638;
+}
+.banner {
+  min-height: 575px;
+  min-width: 100%;
+  background-size: cover;
+  filter: brightness(72%);
+
+}
+
+.bullet {
+  font-size: 130%;
+  font-weight:normal;
+}
+.job-bullet {
+  font-size: 200%;
+  font-weight:normal;
+  text-align: center;
+}
+#qilu-button {
+  padding: 0px;
+  max-width: 100%;
+  height:auto;
+}
+
+#button-image {
+  width:100% ;
+  margin-top: 1%;
+}
+#map-wrapper {
+   height: 80vmin;
+   margin-bottom: 15px;
+}
+
+.body-header {
+  font-weight: normal;
+  padding-bottom: 2.5%;
+}
+.home-header {
+  font-size: 300%;
+}
+.home-paragraph {
+  font-size: 200%;
+  line-height: 140%;
+
+  font-family: "Lucida Bright";
+}
+.hvr-fade {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px transparent;
+  overflow: hidden;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: color, background-color;
+  transition-property: color, background-color;
+}
+.hvr-fade:hover, .hvr-fade:focus, .hvr-fade:active {
+  background-color: #2098D1;
+  color: white;
+}
+
+
+#box    {
+    height:auto;
+          background: url(qilulogo.jpg);
+          background-size:contain;
+    border-radius:5px;
+    overflow:hidden;
+}
+
+
+.overlay    {  background:rgba(0,0,0,.75);
+               text-align:center;
+               padding: 0;
+               opacity:0;
+               -webkit-transition: opacity .25s ease;}
+
+#box:hover .overlay {
+               opacity:1;}
+
+.col-centered{
+                   float: none;
+                   margin: 0 auto;
+               }
+
+
+
+#careers-form {
+  color: black;
+}
+/* --------- footer ----------- */
+.site-footer {
+    position: relative;
+    z-index: 200;
+    padding: 35px 0 0;
+    padding-bottom: 25px;
+    color: #CCC;
+    background-color: #051610;
+}
+
+.footer-logo {
+    max-width: 180px;
+    height:auto;
+    padding-bottom: 10px;
+    left: 0;
+    float:left;
+}
+/*
+.logo {
+  margin-top: -18px;
+  height: 10px;
+  /*height: 9.5vmin;*/
+
+}*/
