@@ -120,16 +120,20 @@ function processFormFieldsIndividual(req, res, next) {
     form.on('file', function (name, file) {
         // console.log(name);
         // console.log(file);
+        var fileType = file.type.split('/').pop();
+        if (fileType != 'jpg' && fileType != 'png' && fileType != 'doc' && fileType != 'docx' && fileType != 'pdf') {
+          // throw new Error("Your resume must be a jpg, png, doc, docx, or pdf.");
+          res.end("Your resume must be a jpg, png, doc, docx, or pdf.");
+          return;
+        }
+        if (file.size > 5000000) {
+          res.end("Your resume must be less than 5 MB.");
+          return;
+        }
         fields[name] = file.path;
         // console.log(file.path);
-        console.log(file.type);
-        var fileType = file.type.split('/').pop();
 
-        if (fileType != 'jpg' || fileType != 'png' || fileType != 'doc' || fileType != 'docx' || fileType != 'pdf') {
-          // throw new Error("Your resume must be a jpg, png, doc, docx, or pdf.");
-          return ;
-          // res.end("Your resume must be a jpg, png, doc, docx, or pdf.");
-        }
+
         //Storing the files meta in fields array.
         //Depending on the application you can process it accordingly.
     });
@@ -144,11 +148,9 @@ function processFormFieldsIndividual(req, res, next) {
             bytesExpected: bytesExpected
         };
         //console.log(progress); to clean up my bash for now.
-        if (progress.bytesExpected > 5000000) {
-          // console.log('too big' + progress.bytesReceived);
-          throw new Error('Your resume must be under 5 MB.');
-          // res.end("Your resume must be under 5 MB.");
-        }
+        // if (progress.bytesExpected > 5000000) {
+        //   throw new Error('Your resume must be under 5 MB.');
+        // }
         //Logging the progress on console.
         //Depending on your application you can either send the progress to client
         //for some visual feedback or perform some other operation.
@@ -180,20 +182,22 @@ function mailHandler(fields) {
   var body = formatBody(fields);
   var data = {
     from: "sean <postmaster@sandbox243735a582fe4639ac04b13701811cd2.mailgun.org>",
-    to: 'seann@berkeley.edu',
+    to: 'careers@qlsfbio.com',
     subject: 'Incoming Job Application',
     text: body,
     attachment: fields['resume']
     //fields['resume']
   };
 
-  mailgun.messages().send(data, function (error, body) {
-    console.log(body);
-  });
+  if (fields['resume']) { //checks to make sure that the user properly uploaded their resume before sending the email.
+    mailgun.messages().send(data, function (error, body) {
+      console.log(body);
+    });
+  }
 }
 
 function formatBody(fields) {
-  var body = "";
+  var body = "You have an incoming job application. The applicant's information is shown below:\n\n";
   var keys = Object.keys(fields);
   for (var i = 0; i < keys.length - 1; i++) { //it's -1 because the last one is the resume
     body += keys[i] + "\n";
